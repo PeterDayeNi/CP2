@@ -8,8 +8,9 @@ So people start to build personal NAS. There is ready-made NAS by different tech
 
 ## Software Part
 
-For the software part, it’s very simple, and there are many way you can do it. The easiest way is to install Syncloud system on your Raspberry Pi. However, your Raspberry can only be used as a personal NAS. The other way is to install Raspbian system, then install the software like ArOZ Online or Nextcloud. 
+For the software part, it’s like a bridge or gate, and there are many way you can do it. 
+The software like ArOZ Online or Nextcloud on Raspbian system is designed to do this job. So basicly this kind of software create a platform that you can connect to by your computer, and when you put the files you want to storage in hard drive on this platform. Then the platform will sort out the files and put it in to the hard drive. Also, you can access the platform on any device by using your own account. 
 
 ## Hardware Part
 
-For hardware part, all you need to do is a hard disk connect to the Raspberry Pi and find a disk holder. Shoe box will be a nice choice if you can’t find a suitable disk holder.
+For hardware part, is the place where you put your files in. Usually it is a hard disk holder with a power supply, and with hard drives in it. It is the same as the bookcase which you place your books.
