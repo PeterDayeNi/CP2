@@ -1,0 +1,112 @@
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+
+import "./styles.css";
+
+var pages = {
+  start: {
+    text: "Welcome, traveler! How would you like to get to your destination?",
+    leftLabel: "Train",
+    rightLabel: "Ship",
+    leftPage: "onthetrain",
+    rightPage: "ontheship",
+    State: "1"
+  },
+  onthetrain: {
+    text:
+      "Welcome aboard the choo-choo train! Please make your way to your seat. What's the number?",
+    leftLabel: "12E",
+    rightLabel: "97C",
+    leftPage: "death",
+    rightPage: "life",
+    State: "1"
+  },
+  ontheship: {
+    text:
+      "Welcome aboard the choo-choo ship! Please make your way to your seat.What's the number?",
+    leftLabel: "3C",
+    rightLabel: "66A",
+    SecondRightLabel: "I am Monkey D. Luffy",
+    leftPage: "death",
+    rightPage: "life",
+    SecondRightPage: "onepiece",
+    State: "1"
+  },
+  death: {
+    text: "YOU ARE DEATH.",
+    State: "2"
+  },
+  life: {
+    text: "You Surived.",
+    State: "3"
+  },
+  onepiece: {
+    text: "You became the King of the Pirates",
+    State: "4"
+  }
+};
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      page: "start"
+    };
+  }
+
+  goToPage(pageName) {
+    this.setState({
+      page: pageName
+    });
+  }
+
+  render() {
+    var pageData = pages[this.state.page];
+    var showLeftButton = "hidden";
+    var showRightButton = "hidden";
+    var showSecondRightButton = "hidden";
+    if (pageData.leftLabel) {
+      showLeftButton = "visible";
+    }
+    if (pageData.rightLabel) {
+      showRightButton = "visible";
+    }
+    if (pageData.SecondRightLabel) {
+      showSecondRightButton = "visible";
+    }
+    var textcolor = "pink";
+    if (pageData.State === "2") {
+      textcolor = "red";
+    }
+    if (pageData.State === "3") {
+      textcolor = "green";
+    }
+    return (
+      <div className="App">
+        <p style={{ color: textcolor }}> {pageData.text}</p>
+        <button
+          style={{ visibility: showLeftButton }}
+          onClick={() => this.goToPage(pageData.leftPage)}
+        >
+          {pageData.leftLabel}
+        </button>
+        <button
+          style={{ visibility: showRightButton }}
+          onClick={() => this.goToPage(pageData.rightPage)}
+        >
+          {pageData.rightLabel}
+        </button>
+        <button
+          style={{ visibility: showSecondRightButton }}
+          onClick={() => this.goToPage(pageData.SecondRightPage)}
+        >
+          {pageData.SecondRightLabel}
+        </button>
+      </div>
+    );
+  }
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
