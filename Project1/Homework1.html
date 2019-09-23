@@ -13,8 +13,16 @@ var pages = {
     State: "1"
   },
   onthetrain: {
-    text:
-      "Welcome aboard the choo-choo train! Please make your way to your seat. What's the number?",
+    text: (
+      <p>
+        Welcome aboard the choo-choo train! Please make your way to your seat.
+        What's the number?{" "}
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Transperth_Train_Perth_2017.jpg"
+          width="150"
+        />
+      </p>
+    ),
     leftLabel: "12E",
     rightLabel: "97C",
     leftPage: "death",
@@ -22,8 +30,16 @@ var pages = {
     State: "1"
   },
   ontheship: {
-    text:
-      "Welcome aboard the choo-choo ship! Please make your way to your seat.What's the number?",
+    text: (
+      <p>
+        Welcome aboard the choo-choo ship! Please make your way to your seat.
+        What's the number?{" "}
+        <img
+          src="https://www.ncl.com/sites/default/files/HERO_Bliss_072618.jpg"
+          width="150"
+        />
+      </p>
+    ),
     leftLabel: "3C",
     rightLabel: "66A",
     SecondRightLabel: "I am Monkey D. Luffy",
@@ -41,7 +57,15 @@ var pages = {
     State: "3"
   },
   onepiece: {
-    text: "You became the King of the Pirates",
+    text: (
+      <p>
+        You became the King of the Pirates
+        <img
+          src="https://www.barnesandnoble.com/blog/sci-fi-fantasy/wp-content/uploads/sites/4/2017/07/onepiece2.jpg"
+          width="250"
+        />
+      </p>
+    ),
     State: "4"
   }
 };
@@ -81,6 +105,9 @@ class App extends Component {
     }
     if (pageData.State === "3") {
       textcolor = "green";
+    }
+    if (pageData.State === "4") {
+      textcolor = "orange";
     }
     return (
       <div className="App">
