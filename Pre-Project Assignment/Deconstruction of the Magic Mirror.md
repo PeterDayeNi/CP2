@@ -7,5 +7,8 @@ Magic Mirror is basically a mirror with information on it, including time, date,
 
 ## Software
 
+There are lots of open source software on the Raspberry Pi system. They all play a role of personal assistent. They collect the information you need from internet including the time and weather. Then after organizing all the data, this "assistent" put the information in the layout that you designed on the monitor. 
 
 ## Hardware
+
+The magic mirror is base on a monitor and a one-way mirror. The one-way mirror can let the light of the monitor go through so the information can "show" on the mirror, and it doesn't change the original job of mirror. 
