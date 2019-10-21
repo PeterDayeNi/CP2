@@ -113,7 +113,7 @@ class ShipPage extends Component {
 
 class TrainSeatPage extends Component {
   render() {
-    if ("TrainSeatA" > 50) {
+    if (this.props.data.TrainSeatA > 50) {
       return (
         <div className="page">
           <p>YOU ARE DEAD.</p>
@@ -130,7 +130,7 @@ class TrainSeatPage extends Component {
 
 class ShipSeatPage extends Component {
   render() {
-    if ("TrainSeatA" > 50) {
+    if (this.props.data.ShipSeatA > 50) {
       return (
         <div className="page">
           <p>YOU ARE DEAD.</p>
